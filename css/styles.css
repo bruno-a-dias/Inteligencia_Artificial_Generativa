@@ -79,67 +79,73 @@
   .navbar-nav {
      flex-wrap:flex-wrap
   }
-
+  
+  main {
+     margin-left: auto; /* Remove margem em dispositivos móveis */
+  }
+  }
+  
   /* Estilo padrão para o tema claro */
-[data-bs-theme="light"] {
-    --bg-color: #ffffff; /* Fundo branco */
-    --text-color: #212529; /* Texto preto */
-    --navbar-bg: #f8f9fa; /* Fundo do menu claro */
-    --btn-bg: #6c757d; /* Fundo do botão secundário */
-    --btn-text: #ffffff; /* Texto do botão */
+  [data-bs-theme="light"] {
+      --bg-color: #ffffff; /* Fundo branco */
+      --text-color: #212529; /* Texto preto */
+      --navbar-bg: #f8f9fa; /* Fundo do menu claro */
+      --btn-bg: #6c757d; /* Fundo do botão secundário */
+      --btn-text: #ffffff; /* Texto do botão */
   }
   
   /* Estilo para o tema escuro */
   [data-bs-theme="dark"] {
-    --bg-color: #121212; /* Fundo escuro */
-    --text-color: #e0e0e0; /* Texto claro */
-    --navbar-bg: #1f1f1f; /* Fundo do menu escuro */
-    --btn-bg: #343a40; /* Fundo do botão escuro */
-    --btn-text: #e0e0e0; /* Texto do botão claro */
+      --bg-color: #121212; /* Fundo escuro */
+      --text-color: #e0e0e0; /* Texto claro */
+      --navbar-bg: #1f1f1f; /* Fundo do menu escuro */
+      --btn-bg: #343a40; /* Fundo do botão escuro */
+      --btn-text: #e0e0e0; /* Texto do botão claro */
   }
   
   /* Aplicação das variáveis de tema */
   body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color .3s ease-in-out, color .3s ease-in-out;
   }
   
   .navbar {
-    background-color: var(--navbar-bg);
+      background-color: var(--navbar-bg);
   }
   
   .nav-link {
-    color: var(--text-color);
+      color: var(--text-color);
   }
   
   .nav-link:hover {
-    color: var(--btn-text); /* Contraste ao passar o mouse */
+      color: var(--btn-text); /* Contraste ao passar o mouse */
   }
   
   .btn {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
   }
   
   .btn:hover {
-    background-color: var(--text-color); /* Contraste ao passar o mouse */
-    color: var(--bg-color);
+      background-color: var(--text-color); /* Contraste ao passar o mouse */
+      color: var(--bg-color);
   }
   
   /* Ajustes para elementos específicos no tema escuro */
   img {
-    filter: brightness(90%); /* Ajusta o brilho das imagens no tema escuro */
+      filter: brightness(90%); /* Ajusta o brilho das imagens no tema escuro */
   }
   
   h2, h4 {
-    color: var(--text-color);
+      color: var(--text-color);
   }
   
   .section-light {
-    background-color: var(--bg-color);
+      background-color: var(--bg-color);
   }
   
   .section-dark {
-    background-color: var(--navbar-bg);
+      background-color: var(--navbar-bg);
   }
+  
