@@ -1,0 +1,145 @@
+/* Estilo padrão para o menu lateral fixo */
+.navbar.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 270px; /* Largura padrão para desktops */
+    overflow-y: auto;
+    z-index: 1030;
+    background-color: #59a6f8;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    flex-direction: column; /* Alinha os itens verticalmente */
+  }
+  
+  .nav-link {
+    padding: 10px 15px;
+  }
+  
+  main {
+    margin-left: 270px; /* Espaço reservado para o menu lateral */
+  }
+  
+  /* Responsividade para diferentes tamanhos de tela */
+  
+  /* Telas muito grandes (largura mínima de 1200px) */
+  @media (min-width: 1200px) {
+    .navbar.fixed-left {
+      width: 300px; /* Aumenta a largura do menu em telas muito grandes */
+    }
+  
+    main {
+      margin-left: 300px;
+    }
+  }
+  
+  /* Telas médias (largura entre 992px e 1199px) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .navbar.fixed-left {
+      width: 250px; /* Largura padrão para desktops médios */
+    }
+  
+    main {
+      margin-left: 250px;
+    }
+  }
+  
+  /* Tablets (largura entre 768px e 991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar.fixed-left {
+      width: 200px; /* Reduz a largura do menu em tablets */
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+  
+    main {
+      margin-left: 200px;
+    }
+  }
+  
+  /* Dispositivos móveis (largura menor que 768px) */
+  @media (max-width: 767px) {
+    .navbar.fixed-left {
+      position: relative; /* Torna o menu não fixo em dispositivos móveis */
+      width: auto; /* Ocupa toda a largura disponível */
+      height: auto; /* Ajusta a altura automaticamente */
+      box-shadow: none; /* Remove a sombra para simplificar o design */
+      overflow-y: visible;
+      background-color: #ffffff; /* Pode ajustar a cor para maior contraste */
+      padding-bottom: 10px;
+      border-bottom: solid #ddd; /* Adiciona uma linha divisória no final do menu */
+      z-index: auto;
+      top: initial;
+      left: initial;
+      flex-direction: row; /* Permite que os itens fiquem horizontais se necessário */
+  }
+  
+  .navbar-nav {
+     flex-wrap:flex-wrap
+  }
+
+  /* Estilo padrão para o tema claro */
+[data-bs-theme="light"] {
+    --bg-color: #ffffff; /* Fundo branco */
+    --text-color: #212529; /* Texto preto */
+    --navbar-bg: #f8f9fa; /* Fundo do menu claro */
+    --btn-bg: #6c757d; /* Fundo do botão secundário */
+    --btn-text: #ffffff; /* Texto do botão */
+  }
+  
+  /* Estilo para o tema escuro */
+  [data-bs-theme="dark"] {
+    --bg-color: #121212; /* Fundo escuro */
+    --text-color: #e0e0e0; /* Texto claro */
+    --navbar-bg: #1f1f1f; /* Fundo do menu escuro */
+    --btn-bg: #343a40; /* Fundo do botão escuro */
+    --btn-text: #e0e0e0; /* Texto do botão claro */
+  }
+  
+  /* Aplicação das variáveis de tema */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg);
+  }
+  
+  .nav-link {
+    color: var(--text-color);
+  }
+  
+  .nav-link:hover {
+    color: var(--btn-text); /* Contraste ao passar o mouse */
+  }
+  
+  .btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+  }
+  
+  .btn:hover {
+    background-color: var(--text-color); /* Contraste ao passar o mouse */
+    color: var(--bg-color);
+  }
+  
+  /* Ajustes para elementos específicos no tema escuro */
+  img {
+    filter: brightness(90%); /* Ajusta o brilho das imagens no tema escuro */
+  }
+  
+  h2, h4 {
+    color: var(--text-color);
+  }
+  
+  .section-light {
+    background-color: var(--bg-color);
+  }
+  
+  .section-dark {
+    background-color: var(--navbar-bg);
+  }
